@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d967046b79a24cb7be87e45373a65b3, type: 3}
+  m_Name: BtnChangeScreenSounds
+  m_EditorClassIdentifier: 
+  _selectSound: {fileID: 8300000, guid: f16264eb8740147d9a33be6cabdc9121, type: 3}
+  _unselectSound: {fileID: 0}
+  _submitSound: {fileID: 8300000, guid: 74cbb15e83c194fa59c52a00160b7d46, type: 3}
