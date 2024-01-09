@@ -1,6 +1,6 @@
 namespace Project.UI.Buttons
 {
-    public class ChangeScreenBtn : BaseButton
+    public class ChangePageBtn : BaseButton
     {
         
     }
