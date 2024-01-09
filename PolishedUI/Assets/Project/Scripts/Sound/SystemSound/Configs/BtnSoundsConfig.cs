@@ -10,7 +10,7 @@ namespace Project.SystemSound
         [SerializeField] private AudioClip _submitSound;
 
         public AudioClip SelectSound => _selectSound;
-        public AudioClip UnselectSound => _unselectSound;
+        public AudioClip DeselectSound => _unselectSound;
         public AudioClip SubmitSound => _submitSound;
     }
 }

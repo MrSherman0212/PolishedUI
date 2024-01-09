@@ -399,7 +399,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -803,10 +803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InWorldPage
       objectReference: {fileID: 0}
-    - target: {fileID: 1164519321225665638, guid: 42988def29f484176875e9baaf903692, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 5912204157489023326, guid: 42988def29f484176875e9baaf903692, type: 3}
+      propertyPath: _nextPage
+      value: 
+      objectReference: {fileID: 6639815394051309092}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42988def29f484176875e9baaf903692, type: 3}
 --- !u!1 &1506832953
@@ -862,6 +862,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InCameraPage
       objectReference: {fileID: 0}
+    - target: {fileID: 2831904277253114656, guid: d02b6ff697b2c4adda2cdb34bb2a30e3, type: 3}
+      propertyPath: _nextPage
+      value: 
+      objectReference: {fileID: 2122502252}
     - target: {fileID: 3300324008634140371, guid: d02b6ff697b2c4adda2cdb34bb2a30e3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -872,7 +876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3300324008634140371, guid: d02b6ff697b2c4adda2cdb34bb2a30e3, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3300324008634140371, guid: d02b6ff697b2c4adda2cdb34bb2a30e3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -946,6 +950,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4898028380744534638, guid: d02b6ff697b2c4adda2cdb34bb2a30e3, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 91908726784
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898028380744534638, guid: d02b6ff697b2c4adda2cdb34bb2a30e3, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:fe82f9f10772d4052ba0002a16ef0268
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d02b6ff697b2c4adda2cdb34bb2a30e3, type: 3}
 --- !u!224 &6639815394051309091 stripped
@@ -953,3 +965,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3300324008634140371, guid: d02b6ff697b2c4adda2cdb34bb2a30e3, type: 3}
   m_PrefabInstance: {fileID: 6639815394051309090}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6639815394051309092 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -5849616850792599194, guid: d02b6ff697b2c4adda2cdb34bb2a30e3, type: 3}
+  m_PrefabInstance: {fileID: 6639815394051309090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713564026127c4d4cb8f3d3e4d2dbaf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

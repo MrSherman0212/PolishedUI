@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d967046b79a24cb7be87e45373a65b3, type: 3}
-  m_Name: BtnChangeScreenSounds
+  m_Name: BtnSounds
   m_EditorClassIdentifier: 
   _selectSound: {fileID: 8300000, guid: f16264eb8740147d9a33be6cabdc9121, type: 3}
   _unselectSound: {fileID: 0}

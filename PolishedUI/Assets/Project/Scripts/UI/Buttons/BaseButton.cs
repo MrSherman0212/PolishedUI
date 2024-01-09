@@ -3,13 +3,14 @@ using UnityEngine.EventSystems;
 using UnityEngine;
 using Zenject;
 
-namespace Project.UI.Buttons
+namespace Project.UI
 {
     [RequireComponent(typeof(EventTrigger))]
     public abstract class BaseButton : MonoBehaviour
     {
         [SerializeField] private BtnSoundsConfig _BtnSoundsConfig;
         private SystemSoundsManager _soundsManager;
+
         private EventTrigger _eventTrigger;
         private EventTrigger.Entry _pointerClickEvent;
         private EventTrigger.Entry _submitEvent;
@@ -19,7 +20,7 @@ namespace Project.UI.Buttons
         private EventTrigger.Entry _deselectEvent;
 
         [Inject]
-        private void Init(SystemSoundsManager soundsManager)
+        protected virtual void Init(SystemSoundsManager soundsManager)
         {
             _soundsManager = soundsManager;
             _eventTrigger = GetComponent<EventTrigger>();
@@ -50,6 +51,6 @@ namespace Project.UI.Buttons
 
         protected virtual void OnSelect(BaseEventData eventData) => _soundsManager.PlaySystemSound(_BtnSoundsConfig.SelectSound);
 
-        protected virtual void OnDeselect(BaseEventData eventData) => _soundsManager.PlaySystemSound(_BtnSoundsConfig.SelectSound);
+        protected virtual void OnDeselect(BaseEventData eventData) => _soundsManager.PlaySystemSound(_BtnSoundsConfig.DeselectSound);
     }
 }
