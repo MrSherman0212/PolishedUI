@@ -1,12 +1,12 @@
-using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Project.UI
 {
 	public class InCameraPage : BasePage
 	{
-		protected override void Init(PageManager pageManager)
+		protected override void Init(PageManager pageManager, EventSystem eventSystem)
 		{
-			base.Init(pageManager);
+			base.Init(pageManager, eventSystem);
 			ExitPage();
 		}
 

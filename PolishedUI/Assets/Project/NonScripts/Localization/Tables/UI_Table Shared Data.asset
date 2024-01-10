@@ -16,7 +16,23 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: fe82f9f10772d4052ba0002a16ef0268
   m_Entries:
   - m_Id: 91908726784
-    m_Key: New Entry
+    m_Key: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 416804873691136
+    m_Key: QuitGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 417106087632896
+    m_Key: LocalizationSettings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 420429784145920
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 421151112159232
+    m_Key: Apply
     m_Metadata:
       m_Items: []
   m_Metadata:

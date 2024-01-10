@@ -1,7 +1,7 @@
 using Project.UI;
 using UnityEngine;
 
-namespace Project.Utilities
+namespace Project.Utility
 {
 	public class Bootstrap : MonoBehaviour
 	{

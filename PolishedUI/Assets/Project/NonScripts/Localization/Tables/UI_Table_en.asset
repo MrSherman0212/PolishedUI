@@ -19,7 +19,23 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 91908726784
-    m_Localized: Hello
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 416804873691136
+    m_Localized: Quit game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 417106087632896
+    m_Localized: Localization settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 420429784145920
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 421151112159232
+    m_Localized: Apply
     m_Metadata:
       m_Items: []
   references:

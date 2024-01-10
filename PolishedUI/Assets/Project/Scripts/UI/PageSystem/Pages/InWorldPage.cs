@@ -1,3 +1,4 @@
+using UnityEngine.EventSystems;
 using Cinemachine;
 
 namespace Project.UI
@@ -6,9 +7,9 @@ namespace Project.UI
 	{
 		private CinemachineVirtualCamera _camera;
 
-		protected override void Init(PageManager pageManager)
+		protected override void Init(PageManager pageManager, EventSystem eventSystem)
         {
-			base.Init(pageManager);
+			base.Init(pageManager, eventSystem);
 			_camera = GetComponentInChildren<CinemachineVirtualCamera>();
 			ExitPage();
 		}
