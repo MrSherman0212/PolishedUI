@@ -2,6 +2,7 @@ using Project.SystemSound;
 using UnityEngine.EventSystems;
 using UnityEngine;
 using Zenject;
+using UniRx;
 
 namespace Project.UI
 {
@@ -18,6 +19,8 @@ namespace Project.UI
         private EventTrigger.Entry _selectEvent;
         private EventTrigger.Entry _pointerExitEvent;
         private EventTrigger.Entry _deselectEvent;
+
+        public ReactiveCommand OnTriggerBtn = new();
 
         [Inject]
         protected virtual void Init(SystemSoundsManager soundsManager)
@@ -47,7 +50,11 @@ namespace Project.UI
             _eventTrigger.triggers.Add(_deselectEvent);
         }
 
-        protected virtual void OnClick(BaseEventData eventData) => _soundsManager.PlaySystemSound(_BtnSoundsConfig.SubmitSound);
+        protected virtual void OnClick(BaseEventData eventData)
+        {
+            _soundsManager.PlaySystemSound(_BtnSoundsConfig.SubmitSound);
+            OnTriggerBtn.Execute();
+        }
 
         protected virtual void OnSelect(BaseEventData eventData) => _soundsManager.PlaySystemSound(_BtnSoundsConfig.SelectSound);
 

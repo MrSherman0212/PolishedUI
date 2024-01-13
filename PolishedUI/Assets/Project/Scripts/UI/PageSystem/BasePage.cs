@@ -29,7 +29,12 @@ namespace Project.UI
         protected virtual void SetFirstSelectedUIElement()
         {
             if (_firstSelectedUIElement != null)
-                _eventSystem.SetSelectedGameObject(_firstSelectedUIElement);
+                SetSelectedUIElement(_firstSelectedUIElement);
+        }
+
+        protected virtual void SetSelectedUIElement(GameObject elem)
+        {
+            _eventSystem.SetSelectedGameObject(elem);
         }
 
         public virtual void ExitPage()
@@ -40,13 +45,14 @@ namespace Project.UI
         public virtual void EnterPage()
         {
             ChangePageState(true);
-            _pageManager.PushPage(this);
             SetFirstSelectedUIElement();
+            _pageManager.PushPage(this);
         }
 
         public virtual void ChangePage(BasePage nextPage)
         {
             if (this == nextPage) return;
+            _pageManager.SetLastSelectedUIElement(_eventSystem.currentSelectedGameObject);
             ExitPage();
             nextPage.EnterPage();
         }

@@ -90,3 +90,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _soundManager: {fileID: -1885250576708920010, guid: fd2fcdc0ee19a4790bbf92966c920f2e, type: 3}
+  _localeSelector: {fileID: -1439835679479901926, guid: 3a8d613a9ce644f8f81031a5c074e116, type: 3}
