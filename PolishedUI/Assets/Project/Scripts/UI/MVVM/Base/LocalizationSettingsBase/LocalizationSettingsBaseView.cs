@@ -1,5 +1,4 @@
 using UnityEngine;
-using Zenject;
 using UniRx;
 
 namespace Project.UI.MVVM
@@ -8,16 +7,14 @@ namespace Project.UI.MVVM
 	{
 		protected LocalizationSettingsBaseViewModel _viewModel;
 		protected CompositeDisposable _disposables = new();
-
-		[Inject]
+		
         protected virtual void Init(LocalizationSettingsBaseViewModel viewModel)
 		{
 			_viewModel = viewModel;
-
 			_viewModel.LocaleIDView.Subscribe(v => DisplayLocales()).AddTo(_disposables);
         }
 
-		protected abstract void SetLocaleID();
+		protected abstract void SetLocaleID(int v);
 
 		protected abstract void DisplayLocales();
 	}

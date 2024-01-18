@@ -1,23 +1,27 @@
-using System.Collections;
 using UnityEngine.Localization.Settings;
-using UnityEngine;
+using System.Threading.Tasks;
 
 namespace Project 
 {
-	public class LocaleSelector : MonoBehaviour
+	public class LocaleSelector
 	{
 		private bool _canChangeLocale = true;
 
-		public void ChangeLocale(int localeID)
+        public void ChangeLocale(int localeID)
         {
-			if (_canChangeLocale == false && localeID > 0) return;
-			StartCoroutine(SetLocale(localeID));
+			if (_canChangeLocale == false && localeID < 0) return;
+			SetLocale(localeID);
         }
 
-		private IEnumerator SetLocale(int localeID)
+		private async Task InitLocaleOperation()
+        {
+			await LocalizationSettings.InitializationOperation.Task;
+        }
+
+		private async void SetLocale(int localeID)
         {
 			_canChangeLocale = false;
-			yield return LocalizationSettings.InitializationOperation;
+			await InitLocaleOperation();
 			LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeID];
 			_canChangeLocale = true;
 		}

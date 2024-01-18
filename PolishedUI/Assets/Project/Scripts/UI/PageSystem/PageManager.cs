@@ -15,7 +15,6 @@ namespace Project.UI
 		public PageManager(EventSystem eventSystem)
         {
 			_eventSystem = eventSystem;
-			Debug.Log(_eventSystem);
 		}
 
 		private void ClearSelectedObjects(int i)

@@ -5,13 +5,12 @@ namespace Project.UI.MVVM
 	public abstract class LocalizationSettingsBaseViewModel
 	{
 		protected LocalizationSettingsBaseModel _model;
-		protected CompositeDisposable _disposables;
-		public ReactiveProperty<int> LocaleIDView;
+		protected CompositeDisposable _disposables = new();
+		public ReactiveProperty<int> LocaleIDView = new();
 
 		public LocalizationSettingsBaseViewModel(LocalizationSettingsBaseModel model)
         {
 			_model = model;
-
 			_model.LocaleID.Subscribe(v => { SetLocaleID(v); }).AddTo(_disposables);
         }
 
