@@ -17,7 +17,9 @@ namespace Project.UI.MVVM
 		public void SetMasterVolume(float v)
         {
 			MasterVolume.Value = v;
-			_audioMixer.SetFloat("MasterVolume", Mathf.Log10(v) * 20);
-        }
+			//_audioMixer.SetFloat("MasterVolume", Mathf.Log10(v) * 20);
+			_audioMixer.SetFloat("MasterVolume", Mathf.Max(19.9316f * Mathf.Log(v), -80f));
+
+		}
 	}
 }
