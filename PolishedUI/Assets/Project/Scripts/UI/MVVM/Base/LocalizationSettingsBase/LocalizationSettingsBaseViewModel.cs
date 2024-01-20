@@ -6,7 +6,7 @@ namespace Project.UI.MVVM
 	{
 		protected LocalizationSettingsBaseModel _model;
 		protected CompositeDisposable _disposables = new();
-		public ReactiveProperty<int> LocaleIDView = new();
+		public ReactiveProperty<int> LocaleIDView { get; protected set; } = new();
 
 		public LocalizationSettingsBaseViewModel(LocalizationSettingsBaseModel model)
         {

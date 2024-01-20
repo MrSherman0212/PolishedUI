@@ -28,11 +28,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 420429784145920
-    m_Key: Back
+    m_Key: AudioSettings
     m_Metadata:
       m_Items: []
   - m_Id: 421151112159232
     m_Key: Apply
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3897861254144000
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3900826119561216
+    m_Key: Back
     m_Metadata:
       m_Items: []
   m_Metadata:

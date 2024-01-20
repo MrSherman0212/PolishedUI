@@ -31,11 +31,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 420429784145920
-    m_Localized: Back
+    m_Localized: Audio settings
     m_Metadata:
       m_Items: []
   - m_Id: 421151112159232
     m_Localized: Apply
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3897861254144000
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3900826119561216
+    m_Localized: Back
     m_Metadata:
       m_Items: []
   references:

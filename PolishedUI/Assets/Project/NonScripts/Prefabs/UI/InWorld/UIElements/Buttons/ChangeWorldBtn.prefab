@@ -93,7 +93,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7551545800036174303, guid: 96eedc21fde4d4178babc8dcb9b3b349, type: 3}
       propertyPath: m_Name
-      value: ChangeWorldPageBtn
+      value: ChangeWorldBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196944165175969185, guid: 96eedc21fde4d4178babc8dcb9b3b349, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -1892449714617568739, guid: 96eedc21fde4d4178babc8dcb9b3b349, type: 3}

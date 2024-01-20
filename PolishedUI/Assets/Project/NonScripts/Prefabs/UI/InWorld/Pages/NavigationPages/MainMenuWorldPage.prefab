@@ -207,7 +207,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &3455752411141019941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -670,7 +670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 874703077313111116, guid: 28a558b1facbc4549b926b875ae361d9, type: 3}
       propertyPath: m_Name
-      value: ToLocalizationSettingsWorldBtn
+      value: ToSettingsWorldBtn
       objectReference: {fileID: 0}
     - target: {fileID: 5584650479423319280, guid: 28a558b1facbc4549b926b875ae361d9, type: 3}
       propertyPath: m_Pivot.x

@@ -10,8 +10,8 @@ namespace Project.UI.MVVM
 {
 	public class LocalizationSettingsDefaultView : LocalizationSettingsBaseView
 	{
+        private List<string> localeNames = new();
         [SerializeField] private TMP_Dropdown _localizationDropDown;
-        [SerializeField] List<string> localeNames = new();
         [SerializeField] private BaseButton _submit;
         [SerializeField] private BaseButton _cancel;
 
@@ -39,8 +39,8 @@ namespace Project.UI.MVVM
         protected override void Init(LocalizationSettingsBaseViewModel viewModel)
         {
             base.Init(viewModel);
-            _submit.OnTriggerBtn.Subscribe(v => { _viewModel.SubmitLocaleID(); }).AddTo(_disposables);
-            _cancel.OnTriggerBtn.Subscribe(v => { _viewModel.ResetLocaleID(); }).AddTo(_disposables);
+            _submit.OnTriggerBtn.Subscribe(v => _viewModel.SubmitLocaleID()).AddTo(_disposables);
+            _cancel.OnTriggerBtn.Subscribe(v => _viewModel.ResetLocaleID()).AddTo(_disposables);
             _localizationDropDown.onValueChanged.AddListener(SetLocaleID);
             _localizationDropDown.ClearOptions();
         }

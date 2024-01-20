@@ -1,7 +1,7 @@
 using UnityEngine.Localization.Settings;
 using System.Threading.Tasks;
 
-namespace Project 
+namespace Project.Utility
 {
 	public class LocaleSelector
 	{

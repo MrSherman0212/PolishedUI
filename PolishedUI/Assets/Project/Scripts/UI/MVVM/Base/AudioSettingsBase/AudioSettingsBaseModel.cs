@@ -1,13 +1,23 @@
+using UnityEngine.Audio;
+using UnityEngine;
 using UniRx;
 
 namespace Project.UI.MVVM
 {
 	public abstract class AudioSettingsBaseModel
 	{
-		private ReactiveProperty<float> _masterVolume = new();
+		protected AudioMixer _audioMixer;
+		public ReactiveProperty<float> MasterVolume { get; protected set; } = new();
 
-		public ReactiveProperty<float> MasterVolume => _masterVolume;
+		public AudioSettingsBaseModel(AudioMixer mixer)
+        {
+			_audioMixer = mixer;
+        }
 
-		public abstract void SetMasterVolume(float v);
+		public void SetMasterVolume(float v)
+        {
+			MasterVolume.Value = v;
+			_audioMixer.SetFloat("MasterVolume", Mathf.Log10(v) * 20);
+        }
 	}
 }
