@@ -7,7 +7,7 @@ namespace Project.Utility
 	{
 		[SerializeField] private BasePage _entryPage;
 
-		private void Awake()
+		private void Start()
         {
 			_entryPage.EnterPage();
         }

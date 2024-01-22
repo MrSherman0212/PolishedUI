@@ -6,11 +6,11 @@ namespace Project.Zenject
 {
     public class ConfigInstaller : MonoInstaller
     {
-        [SerializeField] private HeroConfig _heroConfig;
+        [SerializeField] private SceneNamesConfig _sceneNamesConfig;
 
         public override void InstallBindings()
         {
-            Container.BindInstance(_heroConfig);
+            Container.Bind<SceneNamesConfig>().FromInstance(_sceneNamesConfig);
         }
     }
 }

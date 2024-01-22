@@ -1,5 +1,4 @@
 using UnityEngine.Localization.Settings;
-using System.Threading.Tasks;
 
 namespace Project.Utility
 {
@@ -13,15 +12,10 @@ namespace Project.Utility
 			SetLocale(localeID);
         }
 
-		private async Task InitLocaleOperation()
-        {
-			await LocalizationSettings.InitializationOperation.Task;
-        }
-
 		private async void SetLocale(int localeID)
         {
 			_canChangeLocale = false;
-			await InitLocaleOperation();
+			await LocalizationSettings.InitializationOperation.Task;
 			LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeID];
 			_canChangeLocale = true;
 		}

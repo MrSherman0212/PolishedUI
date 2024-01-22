@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: d5909056afd0b4d028967db4f27b506c
+guid: 0a6fa1249a45d49b4902a72b1d50a764
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - _BtnSoundsConfig: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
