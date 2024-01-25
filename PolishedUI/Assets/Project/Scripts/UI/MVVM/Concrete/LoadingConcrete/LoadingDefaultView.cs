@@ -17,7 +17,8 @@ namespace Project.UI.MVVM
 
         protected override void Display(bool v)
         {
-            _changeSceneBtn.gameObject.SetActive(v);
+            if (_changeSceneBtn != null)
+               _changeSceneBtn.gameObject.SetActive(v);
         }
     }
 }
