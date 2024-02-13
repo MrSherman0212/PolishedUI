@@ -42,12 +42,14 @@ MonoBehaviour:
   m_overridePlayerVersion: 
   m_GroupAssets:
   - {fileID: 11400000, guid: b4314bbfcee1944c7a1471ee0b2c80e7, type: 2}
-  - {fileID: 11400000, guid: f35002569b75947f08c21eb85a6e3106, type: 2}
   - {fileID: 11400000, guid: c0f8c1acb34dd4796acc78427ed1c2bc, type: 2}
   - {fileID: 11400000, guid: 60bdc5bf0d4254b6ebfae71336fff5ed, type: 2}
   - {fileID: 11400000, guid: 1259a8476aa384addb7aa28af6e5bfc2, type: 2}
   - {fileID: 11400000, guid: 882bad46e5fde4db69ec7d48b26897d9, type: 2}
   - {fileID: 11400000, guid: fc465d4d55d3146a882b04ca551899fe, type: 2}
+  - {fileID: 11400000, guid: f35002569b75947f08c21eb85a6e3106, type: 2}
+  - {fileID: 11400000, guid: 6a7b6c344cfad4ee5b19f95bee2bd117, type: 2}
+  - {fileID: 11400000, guid: 62903a568e3694974bb152e20da6faa4, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -88,12 +90,21 @@ MonoBehaviour:
     m_ProfileVersion: 1
   m_LabelTable:
     m_LabelNames:
-    - default
+    - Preload
     - Locale
     - Locale-en
-    - Preload
     - Locale-ru
     - Locale-tr
+    - default
+    - Scene
+    - Prefab
+    - UI
+    - SND
+    - Model
+    - Texture
+    - Shader
+    - VFX
+    - Material
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 73d2f3e1903f34f5fa8d94c795c3dcce, type: 2}

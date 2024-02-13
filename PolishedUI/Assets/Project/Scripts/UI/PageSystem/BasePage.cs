@@ -33,14 +33,10 @@ namespace Project.UI
         }
 
         protected virtual void SetSelectedUIElement(GameObject elem)
-        {
-            _eventSystem.SetSelectedGameObject(elem);
-        }
+            => _eventSystem.SetSelectedGameObject(elem);
 
         public virtual void ExitPage()
-        {
-            ChangePageState(false);
-        }
+            => ChangePageState(false);
 
         public virtual void EnterPage()
         {

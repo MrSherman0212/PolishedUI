@@ -1,11 +1,11 @@
-using Project.Game.Configs;
 using Project.SystemSound;
 using Project.UI.MVVM;
 using Project.Utility;
 using Project.UI;
-using UnityEngine.EventSystems;
-using UnityEngine.Audio;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.EventSystems;
+using UnityEngine.AddressableAssets;
 using Zenject;
 
 namespace Project.Zenject
@@ -17,7 +17,8 @@ namespace Project.Zenject
         [SerializeField] private EventSystem _eventSystem;
         [SerializeField] private SystemSoundsManager _soundManager;
         [SerializeField] private AudioMixer _audioMixer;
-        private SceneLoader _sceneLoader;
+        [SerializeField] private AssetReference _loadingScene;
+        private NewScenesManager _newScenesManager;
 
         private LoadingDefaultModel _loadingDefaultModel;
         private LoadingDefaultViewModel _loadingDefaultViewModel;
@@ -42,21 +43,19 @@ namespace Project.Zenject
             _pageManager = new(_eventSystem);
             Container.Bind<PageManager>().FromInstance(_pageManager).AsSingle().NonLazy();
 
-
-            SceneNamesConfig sceneNamesConfig = Container.Resolve<SceneNamesConfig>();
-            _sceneLoader = new(sceneNamesConfig);
-            Container.Bind<SceneLoader>().FromInstance(_sceneLoader).AsSingle().NonLazy();
+            _newScenesManager = new(_loadingScene);
+            Container.Bind<NewScenesManager>().FromInstance(_newScenesManager).AsSingle().NonLazy();
 
             // === MVVM
-            _loadingDefaultModel = new(_sceneLoader);
+            _loadingDefaultModel = new(_newScenesManager); // --- Loading screen
             _loadingDefaultViewModel = new(_loadingDefaultModel);
             Container.Bind<LoadingDefaultViewModel>().FromInstance(_loadingDefaultViewModel).AsSingle().NonLazy();
 
-            _localizationSettingsDefaultModel = new();
+            _localizationSettingsDefaultModel = new(); // --- Localization screen
             _localizationSettingsDefaultViewModel = new(_localizationSettingsDefaultModel);
             Container.Bind<LocalizationSettingsDefaultViewModel>().FromInstance(_localizationSettingsDefaultViewModel).AsSingle().NonLazy();
 
-            _audioSettingsDefaultModel = new(_audioMixer);
+            _audioSettingsDefaultModel = new(_audioMixer); // --- AudioSettings screen
             _audioSettingsDefaultViewModel = new(_audioSettingsDefaultModel);
             Container.Bind<AudioSettingsDefaultViewModel>().FromInstance(_audioSettingsDefaultViewModel).AsSingle().NonLazy();
         }

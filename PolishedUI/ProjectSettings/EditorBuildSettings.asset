@@ -6,14 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Project/NonScripts/Scenes/MainMenu.unity
-    guid: e680153c93cda4a1bb41498cd02751ca
-  - enabled: 1
-    path: Assets/Project/NonScripts/Scenes/Loading.unity
-    guid: 878d6e598d0054e4689fbd56ec9b9369
-  - enabled: 1
-    path: Assets/Project/NonScripts/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Project/NonScripts/Scenes/InitScene.unity
+    guid: 6af0a52b6b5114e158cc63593b1ab7ec
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 356a81d41c6b34bec964938976bdf82b, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: d9931fd499b0943d4bbaae86067779cb, type: 2}

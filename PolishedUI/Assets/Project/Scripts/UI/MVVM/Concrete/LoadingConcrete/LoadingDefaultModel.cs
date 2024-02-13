@@ -4,9 +4,9 @@ namespace Project.UI.MVVM
 {
 	public class LoadingDefaultModel : LoadingBaseModel
 	{
-		public LoadingDefaultModel(SceneLoader sceneLoader) : base(sceneLoader)
+		public LoadingDefaultModel(NewScenesManager newScenesManager) : base(newScenesManager)
         {
-			_sceneLoader = sceneLoader;
+			_sceneLoader = newScenesManager;
         }
 	}
 }

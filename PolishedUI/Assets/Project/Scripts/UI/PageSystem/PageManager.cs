@@ -46,5 +46,11 @@ namespace Project.UI
 			else
 				_selectedObjects.Add(_currentPage, lastSelectedUIObject);
 		}
-	}
+
+        public void ClearAll()
+        {
+			_pageStack.Clear();
+			_selectedObjects.Clear();
+        }
+    }
 }
