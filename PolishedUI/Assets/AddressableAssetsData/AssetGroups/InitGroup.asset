@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: fe7f28e312c3445ab9dba30bc8c944c1
   m_SerializeEntries:
   - m_GUID: 878d6e598d0054e4689fbd56ec9b9369
-    m_Address: Assets/Project/NonScripts/Scenes/Loading.unity
+    m_Address: LoadingScene
     m_ReadOnly: 0
     m_SerializedLabels:
     - Scene

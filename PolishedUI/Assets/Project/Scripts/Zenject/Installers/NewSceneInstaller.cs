@@ -13,7 +13,6 @@ namespace Project.Zenject
         public override void InstallBindings()
         {
             _localeSelector = Container.Resolve<NewScenesManager>();
-            _localeSelector.SetEntryPage(_entryPage);
         }
     }
 }

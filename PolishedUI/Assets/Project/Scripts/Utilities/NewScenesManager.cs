@@ -12,6 +12,7 @@ namespace Project.Utility
 
 		private SceneInstance _loadingSceneInstance;
 		private AssetReference _loadingScene;
+		private bool _canUnloadScene = false;
 
 		public ReactiveProperty<bool> CanChangeScene { get; private set; } = new() { Value = false };
 
@@ -26,8 +27,8 @@ namespace Project.Utility
 			{
 				_currentLoadedSceneInstance = handle.Result;
 				CanChangeScene.Value = true;
+				_canUnloadScene = true;
 			};
-			UnloadPreviousScene();
 			_previousLoadedSceneInstance = _currentLoadedSceneInstance;
 		}
 
@@ -36,7 +37,8 @@ namespace Project.Utility
 			Addressables.LoadSceneAsync(_loadingScene).Completed += handle =>
 			{
 				_loadingSceneInstance = handle.Result;
-				UnloadPreviousScene();
+                if (_canUnloadScene)
+					UnloadPreviousScene();
 			};
 		}
 
