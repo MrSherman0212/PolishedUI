@@ -6,7 +6,7 @@ namespace Project.UI.MVVM
 	{
 		public LoadingDefaultModel(NewScenesManager newScenesManager) : base(newScenesManager)
         {
-			_sceneLoader = newScenesManager;
+			_newScenesManager = newScenesManager;
         }
 	}
 }

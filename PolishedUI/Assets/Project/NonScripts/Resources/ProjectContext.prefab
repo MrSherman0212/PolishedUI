@@ -76,8 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657052852731e4ece8536d99eb149277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneNamesConfig: {fileID: 11400000, guid: b649205e05e4647299692011a3246830, type: 2}
-  _heroConfig: {fileID: 11400000, guid: 9ced3e5f1b57842db907eb5fa170de0e, type: 2}
 --- !u!114 &6539178987072217729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,3 +92,8 @@ MonoBehaviour:
   _eventSystem: {fileID: 6272869459347651007, guid: b6c138e58490b45b3a8f9228fdf18bc3, type: 3}
   _soundManager: {fileID: -1885250576708920010, guid: fd2fcdc0ee19a4790bbf92966c920f2e, type: 3}
   _audioMixer: {fileID: 24100000, guid: 4fc17ddc2251e486a824656cad5841ff, type: 2}
+  _loadingScene:
+    m_AssetGUID: 878d6e598d0054e4689fbd56ec9b9369
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

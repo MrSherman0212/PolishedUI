@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: MainMenu
+  m_Name: Loading
   m_EditorClassIdentifier: 
-  m_GroupName: MainMenu
+  m_GroupName: Loading
   m_Data:
     m_SerializedData: []
-  m_GUID: b7cdfe871f8884f09ba793fdf03ef48f
+  m_GUID: 67228e73b2e87447784a3a3629417d81
   m_SerializeEntries:
-  - m_GUID: e680153c93cda4a1bb41498cd02751ca
-    m_Address: Assets/Project/NonScripts/Scenes/MainMenu.unity
+  - m_GUID: 878d6e598d0054e4689fbd56ec9b9369
+    m_Address: LoadingScene
     m_ReadOnly: 0
     m_SerializedLabels:
     - Scene
@@ -26,5 +26,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: c9979b8c1c09c424eafada77babf4259, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: fc67ea12bce5e410badd8481103504c9, type: 2}
-    - {fileID: 11400000, guid: 6e573b806a359412ba363f7323729808, type: 2}
+    - {fileID: 11400000, guid: 9e71ee4105b1545ac8fcaa8dd2ce856d, type: 2}
+    - {fileID: 11400000, guid: d2f14b6bcdf024a3eb4dc708266c8d7f, type: 2}

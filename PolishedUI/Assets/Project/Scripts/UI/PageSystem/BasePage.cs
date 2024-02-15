@@ -16,8 +16,8 @@ namespace Project.UI
         protected virtual void Init(PageManager pageManager, EventSystem eventSystem)
         {
             _pageManager = pageManager;
-            _canvasGroup = GetComponent<CanvasGroup>();
             _eventSystem = eventSystem;
+            _canvasGroup = GetComponent<CanvasGroup>();
         }
 
         protected virtual void ChangePageState(bool v)

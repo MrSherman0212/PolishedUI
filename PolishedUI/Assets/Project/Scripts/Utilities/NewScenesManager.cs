@@ -7,57 +7,67 @@ namespace Project.Utility
 {
 	public class NewScenesManager
 	{
-		private SceneInstance _previousLoadedSceneInstance;
-		private SceneInstance _currentLoadedSceneInstance;
-
 		private SceneInstance _loadingSceneInstance;
-		private AssetReference _loadingScene;
+		private SceneInstance _loadedSceneInstance;
+
+		private AssetReference _loadingSceneAsset;
 		private bool _canUnloadScene = false;
 
-		public ReactiveProperty<bool> CanChangeScene { get; private set; } = new() { Value = false };
+		public ReactiveProperty<bool> CanAllowSceneChange { get; private set; } = new() { Value = false };
 
 		public NewScenesManager(AssetReference loadingScene)
         {
-			_loadingScene = loadingScene;
+			_loadingSceneAsset = loadingScene;
         }
 
-		private void LoadNewScene(string sceneName)
+		private void LoadNextScene(AssetReference nextSceneAsset, bool isInitScene)
 		{
-			Addressables.LoadSceneAsync(sceneName, LoadSceneMode.Additive, false).Completed += handle =>
+			Addressables.LoadSceneAsync(nextSceneAsset, LoadSceneMode.Additive, false).Completed += handle =>
 			{
-				_currentLoadedSceneInstance = handle.Result;
-				CanChangeScene.Value = true;
-				_canUnloadScene = true;
+				_loadedSceneInstance = handle.Result;
+				CanAllowSceneChange.Value = true;
+				if (isInitScene)
+					_loadedSceneInstance.ActivateAsync();
 			};
-			_previousLoadedSceneInstance = _currentLoadedSceneInstance;
 		}
 
-		private void ShowLoadingScreen()
+		private void ShowLoadingScreen(AssetReference nextSceneAsset, bool isInitScene)
         {
-			Addressables.LoadSceneAsync(_loadingScene).Completed += handle =>
+			Addressables.LoadSceneAsync(_loadingSceneAsset).Completed += handle =>
 			{
 				_loadingSceneInstance = handle.Result;
-                if (_canUnloadScene)
-					UnloadPreviousScene();
+				_canUnloadScene = true;
+				if (!isInitScene)
+					UnloadPreviousScene(_loadingSceneInstance);
+				LoadNextScene(nextSceneAsset, isInitScene);
 			};
 		}
 
-        private void UnloadPreviousScene()
-			=> Addressables.UnloadSceneAsync(_previousLoadedSceneInstance);
-
-        public void ChangeScene(string sceneName, bool isInitScene = false)
+        private void UnloadPreviousScene(SceneInstance sceneToUnload)
         {
-			CanChangeScene.Value = false;
-            if (!isInitScene)
-				ShowLoadingScreen();
-			LoadNewScene(sceneName);
+			if (_canUnloadScene)
+            {
+				Addressables.UnloadSceneAsync(sceneToUnload);
+				_canUnloadScene = false;
+            }
+        }
+
+        public void ChangeScene(AssetReference nextSceneAsset, bool isInitScene = false)
+        {
+			CanAllowSceneChange.Value = false;
+			if (!isInitScene)
+				ShowLoadingScreen(nextSceneAsset, isInitScene);
+			else
+				LoadNextScene(nextSceneAsset, isInitScene);
         }
 
 		public void SubmitSceneChange()
         {
-			if (!CanChangeScene.Value) return;
-			_currentLoadedSceneInstance.ActivateAsync();
-			Addressables.UnloadSceneAsync(_loadingSceneInstance);
+			if (!CanAllowSceneChange.Value) return;
+			_loadedSceneInstance.ActivateAsync().completed += handle =>
+			{
+				Addressables.UnloadSceneAsync(_loadingSceneInstance);
+			};
         }
     }
 }

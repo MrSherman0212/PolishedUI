@@ -1,21 +1,15 @@
+using Project.UI;
 using UnityEngine;
-using Zenject;
 
 namespace Project.Utility
 {
 	public class Bootstrap : MonoBehaviour
 	{
-        private NewScenesManager _newScenesManager;
-
-        [Inject]
-        private void Init(NewScenesManager newScenesManager)
-        {
-            _newScenesManager = newScenesManager;
-        }
+        [SerializeField] private BasePage _entryPage;
 
         private void Start()
         {
-            _newScenesManager.ChangeScene("MainMenu");
+            _entryPage.EnterPage();
         }
     }
 }

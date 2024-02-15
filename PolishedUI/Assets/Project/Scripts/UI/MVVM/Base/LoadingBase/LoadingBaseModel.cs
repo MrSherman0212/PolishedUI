@@ -5,19 +5,19 @@ namespace Project.UI.MVVM
 {
 	public abstract class LoadingBaseModel
 	{
-		protected NewScenesManager _sceneLoader;
+		protected NewScenesManager _newScenesManager;
 		protected CompositeDisposable _disposables = new();
 		public ReactiveProperty<bool> CanChangeScene { get; private set; } = new() { Value = false };
 
-		public LoadingBaseModel(NewScenesManager sceneLoader)
+		public LoadingBaseModel(NewScenesManager newScenesManager)
         {
-			_sceneLoader = sceneLoader;
-			_sceneLoader.CanChangeScene.Subscribe(v => CanChangeScene.Value = v).AddTo(_disposables);
+			_newScenesManager = newScenesManager;
+			_newScenesManager.CanAllowSceneChange.Subscribe(v => CanChangeScene.Value = v).AddTo(_disposables);
         }
 
 		public virtual void ChangeScene()
         {
-			_sceneLoader.SubmitSceneChange();
+			_newScenesManager.SubmitSceneChange();
 			UnityEngine.Debug.Log("allowed");
         }
 	}

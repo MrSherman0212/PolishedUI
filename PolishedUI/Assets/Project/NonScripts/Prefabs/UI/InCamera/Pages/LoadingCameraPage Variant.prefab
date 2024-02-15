@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae717bcc75d1e45ba8aca1425cd6e8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _changeSceneBtn: {fileID: 7572062317123364688}
+  _submitSceneChangeBtn: {fileID: 7572062317123364688}
 --- !u!224 &4543988079102561803 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3300324008634140371, guid: d02b6ff697b2c4adda2cdb34bb2a30e3, type: 3}

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: GameplayPart
+  m_Name: Init
   m_EditorClassIdentifier: 
-  m_GroupName: GameplayPart
+  m_GroupName: Init
   m_Data:
     m_SerializedData: []
-  m_GUID: 327dc46203c1b413dae080b7d248aeaf
+  m_GUID: a024b52f3e2e545da83c721e8afc5f37
   m_SerializeEntries:
-  - m_GUID: 9fc0d4010bbf28b4594072e72b8655ab
-    m_Address: GameScene
+  - m_GUID: 6af0a52b6b5114e158cc63593b1ab7ec
+    m_Address: InitScene
     m_ReadOnly: 0
     m_SerializedLabels:
     - Scene
@@ -26,5 +26,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: c9979b8c1c09c424eafada77babf4259, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 2551aecfc233c41fc9fbdcae1ab8450c, type: 2}
-    - {fileID: 11400000, guid: 4a908f255fff847e09b8a5122dfdab8c, type: 2}
+    - {fileID: 11400000, guid: ff523e00e6641426d83f70e7047fd7f7, type: 2}
+    - {fileID: 11400000, guid: 16236748014ce4166941ac78d2ba7723, type: 2}

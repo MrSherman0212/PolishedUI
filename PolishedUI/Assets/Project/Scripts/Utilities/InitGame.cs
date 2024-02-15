@@ -1,22 +1,32 @@
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.ResourceProviders;
 using Zenject;
 
 namespace Project.Utility
 {
     public class InitGame : MonoBehaviour
     {
-        private NewScenesManager _scenesManager;
-        [SerializeField] private string _mainMenuScene;
+        private NewScenesManager _newScenesManager;
+
+        private SceneInstance _initSceneInstance;
+        [SerializeField] private AssetReference _initSceneAsset;
+        [SerializeField] private AssetReference _mainMenuSceneAsset;
 
         [Inject]
-        private void Init(NewScenesManager scenesManager)
+        private void Init(NewScenesManager newScenesManager)
         {
-            _scenesManager = scenesManager;
+            _newScenesManager = newScenesManager;
         }
 
         private void Start()
         {
-            _scenesManager.ChangeScene(_mainMenuScene, true);
+            Addressables.LoadSceneAsync(_initSceneAsset).Completed += handle =>
+            {
+                _initSceneInstance = handle.Result;
+            };
+            _newScenesManager.ChangeScene(_mainMenuSceneAsset, true);
+            Debug.Log("Unload InitScene");
         }
     }
 }

@@ -10,18 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: InitGroup
+  m_Name: Default
   m_EditorClassIdentifier: 
-  m_GroupName: InitGroup
+  m_GroupName: Default
   m_Data:
     m_SerializedData: []
   m_GUID: fe7f28e312c3445ab9dba30bc8c944c1
   m_SerializeEntries:
-  - m_GUID: 878d6e598d0054e4689fbd56ec9b9369
-    m_Address: LoadingScene
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Scene
   - m_GUID: 4dbd4932c474a4b5fbfff3fe56bfe273
     m_Address: Assets/Project/NonScripts/Prefabs/Utilities
     m_ReadOnly: 0
@@ -62,6 +57,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload
+  - m_GUID: e680153c93cda4a1bb41498cd02751ca
+    m_Address: MainMenuScene
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Scene
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c9979b8c1c09c424eafada77babf4259, type: 2}
   m_SchemaSet:

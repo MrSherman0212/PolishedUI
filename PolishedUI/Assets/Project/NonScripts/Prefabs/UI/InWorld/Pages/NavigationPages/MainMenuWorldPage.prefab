@@ -549,6 +549,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1624466214841171583}
     m_Modifications:
+    - target: {fileID: -5790747452994558883, guid: 372e5d8ceca3a450a80885102483d44a, type: 3}
+      propertyPath: _nextSceneAsset.m_AssetGUID
+      value: 9fc0d4010bbf28b4594072e72b8655ab
+      objectReference: {fileID: 0}
     - target: {fileID: 874703077313111116, guid: 372e5d8ceca3a450a80885102483d44a, type: 3}
       propertyPath: m_Name
       value: ChangeSceneWorldBtn
